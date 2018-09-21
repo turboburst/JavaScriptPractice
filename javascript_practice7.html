@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8"/>
+		<title>close window</title>
+		<script type = "text/javascript">
+			var mywin;
+			openWin();
+			function openWin(){
+				mywin = window.open('http://www.google.ca', '_blank', 'width = 800, height = 500, top = 200, left = 40');
+			}
+			function closeWin(){
+				mywin.close();
+			}
+			
+			
+		</script>
+	</head>
+	
+	<body>
+		<input name = "button" type = "button" onClick = "closeWin()" value = "click me"/>
+	</body>
+
+</html>
