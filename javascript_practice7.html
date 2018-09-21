@@ -10,7 +10,17 @@
 				mywin = window.open('http://www.google.ca', '_blank', 'width = 800, height = 500, top = 200, left = 40');
 			}
 			function closeWin(){
-				mywin.close();
+				if(mywin != null){
+					var message = confirm("do you want to close the website");
+					if(message == true){
+						mywin.close();
+					}
+					else{
+					}
+				}
+				else{
+					alert("no such dialge exist now");
+				}
 			}
 			
 			
