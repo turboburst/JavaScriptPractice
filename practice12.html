@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+var num=0;
+var countShouldStop = false;
+function startCount(){
+  countShouldStop = false;
+  numCount();
+}
+
+ function stopCount(){
+   countShouldStop = true;
+ }
+
+ function clearCount(){
+   num = 0;
+   document.getElementById('txt').value=num;
+ }
+
+ function numCount(){
+  document.getElementById('txt').value=num;
+  num++;
+  if(countShouldStop == false){
+    setTimeout("numCount()",100);
+  }
+  }
+</script>
+</head>
+<body>
+<form>
+<input type="text" id="txt" />
+<input type="button" value="Start" onClick="startCount()" />
+<input type="button" value="Stop" onClick="stopCount()" />
+<input type="button" value="Clear" onClick="clearCount()" />
+</form>
+</body>
+</html>

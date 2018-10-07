@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>浏览器对象</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=gkb"/>
+ </head>
+ <body>
+  <div>
+      <p>operation success</p>
+      <p><span id="secondId">6</span> seconds will go imooc</p>
+      <a href="http://www.google.ca"> google</a>
+  </div>
+
+  <script type="text/javascript">
+    var delayTime = 7000;
+    var time = 6;
+    function countTime(){
+        document.getElementById("secondId").innerHTML = time;
+        time-=1;
+        if(time == 0){
+            gotoGoogle();
+        }
+        else{
+            window.setTimeout("countTime()", 1000);
+        }
+    }
+    function gotoGoogle(){
+        window.open("http://www.google.ca", "_self");
+    }
+    countTime();
+    window.setTimeout("gotoGoogle()", delayTime);
+
+  </script>
+</body>
+</html>

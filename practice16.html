@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="content-type", content="text/html; charset=utf-8"/>
+    <title>history back forward</title>
+    <script type="text/javascript">
+      function goback(){
+        window.history.go(-1);
+      }
+      function goforward(){
+        window.history.go(1);
+      }
+    </script>
+  </head>
+
+  <body>
+    click link below, add history list:
+    <br />
+    <a href="#target1">first target</a>
+    <a name="target1"></a>
+    <br />
+    <a href="#target2">second target</a>
+    <a name="target2"></a>
+    <br /><br />
+    <form>
+      <input type="button" value="goback to previous page" onclick="goback()"/>
+      <input type="button" value="go to next page" onclick="goforward()"/>
+    </form>
+  </body>
+
+</html>

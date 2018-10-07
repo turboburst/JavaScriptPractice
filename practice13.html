@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>clearTimeout</title>
+    <script type="text/javascript">
+      var numCount = 0;
+      var timeout;
+      function startCount(){
+        document.getElementById("countId").value = numCount;
+        numCount++;
+        timeout=setTimeout("startCount()", 100);
+      }
+      function stopCount(){
+        clearTimeout(timeout);
+      }
+      function clearCount(){
+        numCount = 0;
+        document.getElementById("countId").value = numCount;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="countId"/>
+      <input type="button" value="Start" onclick="startCount()"/>
+      <input type="button" value="Stop" onclick="stopCount()"/>
+      <input type="button" value="Clear" onclick="clearCount()"/>
+    </form>
+  </body>
+</html>

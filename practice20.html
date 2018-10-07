@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>getElementsById</title>
+    <script type="text/javascript">
+      var myNodes = document.getElementsByName("text");
+      function getNumber(){
+        window.alert(myNodes[1].value);
+      }
+    </script>
+  </head>
+
+  <body>
+    <input name="text" type="text" value="1"/>
+    <input name="text" type="text" value="2"/>
+    <input name="text" type="text" value="3"/>
+    <input name="text" type="text" value="4"/>
+    <input name="text" type="text" value="5"/>
+    <br/>
+    <input type="button" onclick="getNumber()" value="click"/>
+  </body>
+
+</html>
